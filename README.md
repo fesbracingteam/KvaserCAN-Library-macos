@@ -142,10 +142,12 @@ Type `can_test --help` to display all program options.
 
 - Kvaser Leaf Light v2 (EAN: 73-30130-00685-0)
 - Kvaser Leaf Pro HS v2 (EAN: 73-30130-00843-4)
+- Kvaser U100 (EAN: 73-30130-01173-1)
 - Kvaser U100P (EAN: 73-30130-01174-8)
 
 Since version 0.3 theoretically all (single-channel) CAN interfaces from the device family *Leaf Interfaces* (CAN 2.0 interfaces, e.g. Leaf Light v2) and from the device family *Mhydra Interfaces* (CAN FD interfaces, e.g. U100P) are supported.
 To add a new CAN USB interface from Kvaser, only its USB ProductID and some device specific attributes have to be entered or enabled in the module `KvaserCAN_Devices`.
+See [Adding_a_Device.md](Adding_a_Device.md) for a step-by-step guide (with the Kvaser U100 as example).
 
 Note: _The CAN interfaces listed above are the ones that are enabled and have been tested._
 

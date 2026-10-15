@@ -104,7 +104,7 @@
 #define OPTION_USB_HYBRID_PRO_CANLIN_DEVICE      1 ///< Kvaser Hybrid Pro 2xCAN/LIN (01042-0)
 #define OPTION_USB_BLACKBIRD_PRO_HS_V2_DEVICE    0 ///< Kvaser BlackBird Pro HS v2 (00983-7)
 #define OPTION_USB_MEMO_LIGHT_HS_V2_DEVICE       0 ///< Kvaser Memorator Light HS v2 (01058-1)
-#define OPTION_USB_U100_DEVICE                   0 ///< Kvaser U100 (01173-1)
+#define OPTION_USB_U100_DEVICE                   1 ///< Kvaser U100 (01173-1)
 #define OPTION_USB_U100P_DEVICE                  1 ///< Kvaser U100P (01174-8)
 #define OPTION_USB_U100S_DEVICE                  0 ///< Kvaser U100P (01181-6)
 #define OPTION_USB_USBCAN_PRO_4HS_DEVICE         0 ///< Kvaser USBcan Pro 4xHS (01261-5)
@@ -505,12 +505,18 @@ typedef enum kavser_device_family_t_ {
 /** @} */
 
 /** @name  Kvaser U100 (01173-1)
- *  @brief Tbd.
+ *  @brief Robust single channel USB-to-CAN/CAN FD interface of Kvaser’s U100 range.
  *  @{ */
 #if (OPTION_USB_U100_DEVICE != 0)
     #define USB_U100_PRODUCT_ID  273U
     #define USB_U100_DRV_FAMILY  KVASER_USB_MHYDRA_DEVICE_FAMILY
-    #error Device properties not defined!
+    #define USB_U100_NUM_CHANNELS  1U
+    #define USB_U100_CAN_CLOCK   80U
+    #define USB_U100_TIMER_FREQ  24U
+    #define USB_U100_CAP_CANFD   true
+    #define USB_U100_CAP_NONISO  true
+    #define USB_U100_CAP_SILENT_MODE  true
+    #define USB_U100_CAP_ERROR_FRAME  true
 #endif
 /** @} */
 
