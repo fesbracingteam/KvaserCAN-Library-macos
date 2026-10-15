@@ -101,7 +101,17 @@ _All rights reserved._
   - `$(PROJROOT)/LICENSE`
 8. Double check and update the [`README.md`](https://github.com/mac-can/MacCAN-KvaserCAN/blob/main/README.md) on GitHub (or insert just a blank).
 
-### Procedure
+### Procedure (automated)
+
+1. Tag the default branch and push the tag:
+  - `git tag v0.3.4 && git push origin v0.3.4`
+2. The workflow `.github/workflows/macos-release.yml` builds with `BINARY=UNIVERSAL`,
+   packs `Binaries`, `Includes`, `README.md` and `LICENSE.*` into a .zip-archive,
+   and creates a **draft** release with generated release notes.
+3. Edit the draft: add the test reports (see above) and review the change-log.
+4. Click on `Publish release`.
+
+### Procedure (manual)
 
 1. Click on `Draft a new release` in the [GitHub](https://github.com/mac-can/MacCAN-KvaserCAN) repo.
 2. Fill out all required fields:
